@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Admin Panel</title>
+</head>
+<body>
+    <header>
+        <h1>Admin Panel</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="admin.html">Admin Login</a>
+        </nav>
+    </header>
+    <main>
+        <div class="container">
+            <div class="login-card">
+                <h2>Admin Login</h2>
+                <input type="text" id="username" placeholder="Username" required>
+                <input type="password" id="password" placeholder="Password" required>
+                <button id="login-btn">Login</button>
+                <p id="login-message"></p>
+            </div>
+            <div id="article-section" style="display: none;">
+                <h2>Manage Articles</h2>
+                <input type="text" id="article-title" placeholder="Article Title" required>
+                <textarea id="article-content" placeholder="Article Content" required></textarea>
+                <input type="date" id="article-date" required>
+                <input type="text" id="article-image" placeholder="Image URL">
+                <input type="text" id="article-video" placeholder="Video URL">
+                <button id="submit-article-btn">Add Article</button>
+                <p id="submit-message"></p>
+                <h3>Existing Articles</h3>
+                <div id="existing-articles"></div>
+            </div>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

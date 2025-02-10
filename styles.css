@@ -1,0 +1,240 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f7f7;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100vh;
+}
+
+header {
+    background-color: #3498db;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+nav {
+    margin: 10px 0;
+}
+
+nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #ffeb3b; /* Change color on hover */
+}
+
+main {
+    padding: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+/* Container for Boxed Layout */
+.container {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    width: 90%; /* Responsive width */
+    max-width: 800px; /* Maximum width for larger screens */
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Login Card */
+.login-card {
+    text-align: center;
+    margin-bottom: 30px;
+    animation: slideIn 1s ease-in-out;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-100px);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+.login-card h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Input and Button Styles */
+input, textarea {
+    display: block;
+    margin: 10px 0;
+    padding: 15px;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: border-color 0.3s ease;
+}
+
+input:focus, textarea:focus {
+    border-color: #3498db;
+    outline: none;
+}
+
+button {
+    padding: 10px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-weight: bold;
+    width: 100%; /* Full width for the button */
+    
+}
+
+button:hover {
+    background-color: #2980b9;
+    transform: translateY(-2px); /* Lift effect on hover */
+}
+
+/* Article List Styles */
+#article-list {
+    margin-top: 20px;
+}
+
+.article-item {
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin: 10px 0;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.article-item:hover {
+    transform: scale(1.02); /* Slightly enlarge on hover */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.article-item h4 {
+    margin: 0;
+    font-size: 1.5em;
+    color: #333;
+}
+
+.article-item img {
+    max-width: 100%;
+    height: auto;
+    margin: 10px 0;
+    border-radius: 4px;
+}
+
+.article-item video {
+    max-width: 100%;
+    height: auto;
+    margin: 10px 0;
+    border-radius: 4px;
+}
+
+/* Article Detail Styles */
+#article-detail {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+#article-detail h4 {
+    margin: 0;
+    font-size: 1.8em;
+    color: #333;
+}
+
+#article-detail p {
+    margin: 10px 0;
+}
+
+/* Existing Articles Styles */
+#existing-articles {
+    margin-top: 20px;
+}
+
+.existing-article {
+    border: 1px solid #ccc;
+    padding: 15px;
+    margin: 10px 0;
+    background-color: white;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s ease;
+}
+
+.existing-article:hover {
+    background-color: #f0f0f0; /* Change background on hover */
+}
+/* Existing Articles Styles */
+.existing-article {
+    border: 1px solid #ccc;
+    padding: 15px;
+    margin: 10px 0;
+    background-color: white;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between; /* Space between title and buttons */
+    align-items: center; /* Center items vertically */
+    transition: background-color 0.3s ease;
+}
+
+.existing-article:hover {
+    background-color: #f0f0f0; /* Change background on hover */
+}
+
+.existing-article button {
+    background-color: #dc3545; /* Red for delete */
+    color: white;
+    border: none;
+    padding: 5px 10px 5px 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-size: 0.9em; /* Smaller font size */
+    margin-left: 10px; /* Space between buttons */
+    width: 100px;
+}
+
+.existing-article button:hover {
+    background-color: #c82333;
+    transform: translateY(-2px); /* Lift effect on hover */
+}
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+    input, textarea, button {
+        width: 100%;
+    }
+}
